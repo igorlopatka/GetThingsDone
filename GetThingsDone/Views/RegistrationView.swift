@@ -9,10 +9,10 @@ import SwiftUI
 
 struct RegistrationView: View {
     
-    @State private var username = ""
-    @State private var password = ""
+    @State var username = ""
+    @State var password = ""
     
-    private var isValid: Bool {
+    var isValid: Bool {
         !username.isEmptyOrWhitespace
         && !password.isEmptyOrWhitespace
         && (password.count >= 6
