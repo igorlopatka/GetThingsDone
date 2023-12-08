@@ -11,11 +11,13 @@
 		452253772B1E426000CE8B92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452253762B1E426000CE8B92 /* ContentView.swift */; };
 		452253792B1E426100CE8B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452253782B1E426100CE8B92 /* Assets.xcassets */; };
 		4522537C2B1E426100CE8B92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */; };
+		45B770392B235E3800150C59 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B770382B235E3800150C59 /* HTTPClient.swift */; };
 		45C1659C2B2114E800F301F9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C1659B2B2114E800F301F9 /* RegistrationView.swift */; };
 		45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C1659E2B2116E500F301F9 /* String+Extentions.swift */; };
 		45C165A72B21194900F301F9 /* GetThingsDoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C165A62B21194900F301F9 /* GetThingsDoneTests.swift */; };
 		45C165B42B21195600F301F9 /* GetThingsDoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C165B32B21195600F301F9 /* GetThingsDoneUITests.swift */; };
 		45C165B62B21195600F301F9 /* GetThingsDoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C165B52B21195600F301F9 /* GetThingsDoneUITestsLaunchTests.swift */; };
+		45C165BD2B211A5300F301F9 /* RegistrationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C165BC2B211A5300F301F9 /* RegistrationViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		452253762B1E426000CE8B92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		452253782B1E426100CE8B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45B770382B235E3800150C59 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		45C1659B2B2114E800F301F9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		45C1659E2B2116E500F301F9 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
 		45C165A42B21194900F301F9 /* GetThingsDoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetThingsDoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +51,7 @@
 		45C165B12B21195600F301F9 /* GetThingsDoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetThingsDoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C165B32B21195600F301F9 /* GetThingsDoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThingsDoneUITests.swift; sourceTree = "<group>"; };
 		45C165B52B21195600F301F9 /* GetThingsDoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThingsDoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		45C165BC2B211A5300F301F9 /* RegistrationViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				452253732B1E426000CE8B92 /* GetThingsDone */,
+				452253782B1E426100CE8B92 /* Assets.xcassets */,
 				45C165A52B21194900F301F9 /* GetThingsDoneTests */,
 				45C165B22B21195600F301F9 /* GetThingsDoneUITests */,
 				452253722B1E426000CE8B92 /* Products */,
@@ -98,11 +103,11 @@
 		452253732B1E426000CE8B92 /* GetThingsDone */ = {
 			isa = PBXGroup;
 			children = (
-				45C1659D2B2116C900F301F9 /* Extentions */,
-				45C165982B2114B500F301F9 /* Views */,
 				452253742B1E426000CE8B92 /* GetThingsDoneApp.swift */,
 				452253762B1E426000CE8B92 /* ContentView.swift */,
-				452253782B1E426100CE8B92 /* Assets.xcassets */,
+				45B770372B235E2500150C59 /* Clients */,
+				45C1659D2B2116C900F301F9 /* Extentions */,
+				45C165982B2114B500F301F9 /* Views */,
 				4522537A2B1E426100CE8B92 /* Preview Content */,
 			);
 			path = GetThingsDone;
@@ -114,6 +119,14 @@
 				4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		45B770372B235E2500150C59 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				45B770382B235E3800150C59 /* HTTPClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		45C165982B2114B500F301F9 /* Views */ = {
@@ -136,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				45C165A62B21194900F301F9 /* GetThingsDoneTests.swift */,
+				45C165BC2B211A5300F301F9 /* RegistrationViewTests.swift */,
 			);
 			path = GetThingsDoneTests;
 			sourceTree = "<group>";
@@ -280,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C1659C2B2114E800F301F9 /* RegistrationView.swift in Sources */,
+				45B770392B235E3800150C59 /* HTTPClient.swift in Sources */,
 				45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */,
 				452253772B1E426000CE8B92 /* ContentView.swift in Sources */,
 				452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */,
@@ -291,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C165A72B21194900F301F9 /* GetThingsDoneTests.swift in Sources */,
+				45C165BD2B211A5300F301F9 /* RegistrationViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
