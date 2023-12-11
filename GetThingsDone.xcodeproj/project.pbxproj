@@ -11,6 +11,9 @@
 		452253772B1E426000CE8B92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452253762B1E426000CE8B92 /* ContentView.swift */; };
 		452253792B1E426100CE8B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452253782B1E426100CE8B92 /* Assets.xcassets */; };
 		4522537C2B1E426100CE8B92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */; };
+		4528052A2B278E5000AD9154 /* GTDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452805292B278E4F00AD9154 /* GTDModel.swift */; };
+		4528052C2B27905700AD9154 /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4528052B2B27905700AD9154 /* RegistrationResponse.swift */; };
+		4528052F2B2790F300AD9154 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4528052E2B2790F300AD9154 /* Constants.swift */; };
 		45B770392B235E3800150C59 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B770382B235E3800150C59 /* HTTPClient.swift */; };
 		45C1659C2B2114E800F301F9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C1659B2B2114E800F301F9 /* RegistrationView.swift */; };
 		45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C1659E2B2116E500F301F9 /* String+Extentions.swift */; };
@@ -43,6 +46,9 @@
 		452253762B1E426000CE8B92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		452253782B1E426100CE8B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		452805292B278E4F00AD9154 /* GTDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTDModel.swift; sourceTree = "<group>"; };
+		4528052B2B27905700AD9154 /* RegistrationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResponse.swift; sourceTree = "<group>"; };
+		4528052E2B2790F300AD9154 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45B770382B235E3800150C59 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		45C1659B2B2114E800F301F9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		45C1659E2B2116E500F301F9 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 			children = (
 				452253742B1E426000CE8B92 /* GetThingsDoneApp.swift */,
 				452253762B1E426000CE8B92 /* ContentView.swift */,
+				4528052D2B2790E800AD9154 /* Utils */,
+				452805282B278E3B00AD9154 /* Models */,
 				45B770372B235E2500150C59 /* Clients */,
 				45C1659D2B2116C900F301F9 /* Extentions */,
 				45C165982B2114B500F301F9 /* Views */,
@@ -119,6 +127,23 @@
 				4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		452805282B278E3B00AD9154 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				452805292B278E4F00AD9154 /* GTDModel.swift */,
+				4528052B2B27905700AD9154 /* RegistrationResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4528052D2B2790E800AD9154 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4528052E2B2790F300AD9154 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		45B770372B235E2500150C59 /* Clients */ = {
@@ -298,6 +323,9 @@
 				45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */,
 				452253772B1E426000CE8B92 /* ContentView.swift in Sources */,
 				452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */,
+				4528052C2B27905700AD9154 /* RegistrationResponse.swift in Sources */,
+				4528052A2B278E5000AD9154 /* GTDModel.swift in Sources */,
+				4528052F2B2790F300AD9154 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

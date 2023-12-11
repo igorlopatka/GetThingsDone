@@ -33,7 +33,7 @@ enum HTTPMethod {
 
 struct Resource <T: Codable> {
     let url: URL
-    let method: HTTPMethod = .get([])
+    let method: HTTPMethod
     let modelType: T.Type
 }
 
@@ -60,9 +60,8 @@ struct HTTPClient {
         }
         
         let configuration = URLSessionConfiguration.default
-        // configuration.httpAdditionalHeaders =
+        configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]
         let session = URLSession(configuration: configuration)
-        
         let (data, response) = try await session.data(for: request)
         
         guard let _ = response as? HTTPURLResponse else {
