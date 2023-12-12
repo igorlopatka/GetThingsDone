@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45131C752B288373005E5D97 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45131C742B288373005E5D97 /* LoginView.swift */; };
 		452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452253742B1E426000CE8B92 /* GetThingsDoneApp.swift */; };
 		452253772B1E426000CE8B92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452253762B1E426000CE8B92 /* ContentView.swift */; };
 		452253792B1E426100CE8B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452253782B1E426100CE8B92 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45131C742B288373005E5D97 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		452253712B1E426000CE8B92 /* GetThingsDone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetThingsDone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452253742B1E426000CE8B92 /* GetThingsDoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThingsDoneApp.swift; sourceTree = "<group>"; };
 		452253762B1E426000CE8B92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				45C1659B2B2114E800F301F9 /* RegistrationView.swift */,
+				45131C742B288373005E5D97 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				45C1659C2B2114E800F301F9 /* RegistrationView.swift in Sources */,
 				45B770392B235E3800150C59 /* HTTPClient.swift in Sources */,
 				45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */,
+				45131C752B288373005E5D97 /* LoginView.swift in Sources */,
 				452253772B1E426000CE8B92 /* ContentView.swift in Sources */,
 				452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */,
 				4528052C2B27905700AD9154 /* RegistrationResponse.swift in Sources */,
