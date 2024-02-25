@@ -60,5 +60,4 @@ struct RegistrationView: View {
 
 #Preview {
     RegistrationView()
-        .environmentObject(GTDModel())
 }

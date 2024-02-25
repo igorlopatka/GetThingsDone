@@ -19,4 +19,18 @@ class GTDModel: ObservableObject {
         let registerResponse = try await client.load(resource)
         return registerResponse
     }
+    
+    func login(username: String, password: String) async throws -> LoginResponse {
+
+        let loginData = ["username": username, "password": password]
+        let resource = Resource(url: Constants.URLs.login, method: .post(try! JSONEncoder().encode(loginData)), modelType: LoginResponse.self)
+        let loginResponse = try await client.load(resource)
+        if !loginResponse.error && loginResponse.token != nil && loginResponse.userID != nil {
+            // save to user defaults
+            let defaults = UserDefaults.standard
+            defaults.set(loginResponse.token!, forKey: "authToken")
+            defaults.set(loginResponse.userID!.uuidString, forKey: "userID")
+        }
+        return loginResponse
+    }
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 struct RegistrationResponse: Codable {
+    
     let error: Bool
     var reason: String?
 }

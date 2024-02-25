@@ -23,7 +23,14 @@ struct LoginView: View {
     }
     
     private func login() async {
-        
+        do {
+            let loginResponse = try await model.login(username: username, password: password)
+            if loginResponse.error {
+                errorMessage = loginResponse.reason ?? ""
+            }
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
     
     var body: some View {
