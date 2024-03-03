@@ -10,6 +10,7 @@ import SwiftUI
 struct RegistrationView: View {
     
     @EnvironmentObject private var model: GTDModel
+    @EnvironmentObject private var state: ApplicationState
     
     @State var username = ""
     @State var password = ""
@@ -25,8 +26,9 @@ struct RegistrationView: View {
     private func register() async {
         do {
             let registeredResponse = try await model.register(username: username, password: password)
-            if registeredResponse.error {
-                // take to login screen
+            
+            if !registeredResponse.error {
+                state.routes.append(.login)
             } else {
                 errorMessage = registeredResponse.reason ?? ""
             }
@@ -36,28 +38,30 @@ struct RegistrationView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            Form {
-                Section {
-                    TextField("Username", text: $username)
-                        .textInputAutocapitalization(.never)
-                    SecureField("Password", text: $password)
-                    Text(errorMessage)
-                }
-                
-                Button("Register") {
-                    Task {
-                        await register()
-                    }
-                }
-                .disabled(!isValid)
-                
+        Form {
+            Section {
+                TextField("Username", text: $username)
+                    .textInputAutocapitalization(.never)
+                SecureField("Password", text: $password)
+                Text(errorMessage)
             }
-            .navigationTitle("Register")
+            
+            Button("Register") {
+                Task {
+                    await register()
+                }
+            }
+            .disabled(!isValid)
+            
         }
+        .navigationTitle("Register")
     }
 }
 
 #Preview {
-    RegistrationView()
+    NavigationStack {
+        RegistrationView()
+    }
+    .environmentObject(GTDModel())
+    .environmentObject(ApplicationState())
 }

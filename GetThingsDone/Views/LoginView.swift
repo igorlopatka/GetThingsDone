@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject private var model: GTDModel
+//    @EnvironmentObject private var state: ApplicationState
     
     @State var username = ""
     @State var password = ""
@@ -34,25 +35,23 @@ struct LoginView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            Form {
-                Section {
-                    TextField("Username", text: $username)
-                        .textInputAutocapitalization(.never)
-                    SecureField("Password", text: $password)
-                }
-                
-                Button("Login") {
-                    Task {
-                        await login()
-                    }
-                }
-                .disabled(!isValid)
-                Text(errorMessage)
-
+        Form {
+            Section {
+                TextField("Username", text: $username)
+                    .textInputAutocapitalization(.never)
+                SecureField("Password", text: $password)
             }
-            .navigationTitle("Login")
+            
+            Button("Login") {
+                Task {
+                    await login()
+                }
+            }
+            .disabled(!isValid)
+            Text(errorMessage)
+            
         }
+        .navigationTitle("Login")
     }
 }
 
