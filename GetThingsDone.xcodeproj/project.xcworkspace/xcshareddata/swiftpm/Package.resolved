@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "gettingthingsdoneshareddto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/igorlopatka/GettingThingsDoneSharedDTO.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fb81abbf55a9ab81dd3c5d54ef45a236891486fa"
+      }
+    }
+  ],
+  "version" : 2
+}

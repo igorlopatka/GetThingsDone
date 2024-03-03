@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		45131C752B288373005E5D97 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45131C742B288373005E5D97 /* LoginView.swift */; };
-		45131C772B28855A005E5D97 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45131C762B28855A005E5D97 /* LoginResponse.swift */; };
 		452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452253742B1E426000CE8B92 /* GetThingsDoneApp.swift */; };
 		452253792B1E426100CE8B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452253782B1E426100CE8B92 /* Assets.xcassets */; };
 		4522537C2B1E426100CE8B92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */; };
 		4528052A2B278E5000AD9154 /* GTDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452805292B278E4F00AD9154 /* GTDModel.swift */; };
-		4528052C2B27905700AD9154 /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4528052B2B27905700AD9154 /* RegistrationResponse.swift */; };
 		4528052F2B2790F300AD9154 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4528052E2B2790F300AD9154 /* Constants.swift */; };
+		459057812B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = 459057802B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO */; };
 		45A601C22B94EB56002A3BC2 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A601C12B94EB56002A3BC2 /* ApplicationState.swift */; };
 		45B770392B235E3800150C59 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B770382B235E3800150C59 /* HTTPClient.swift */; };
 		45C1659C2B2114E800F301F9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C1659B2B2114E800F301F9 /* RegistrationView.swift */; };
@@ -44,13 +43,11 @@
 
 /* Begin PBXFileReference section */
 		45131C742B288373005E5D97 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		45131C762B28855A005E5D97 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		452253712B1E426000CE8B92 /* GetThingsDone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetThingsDone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452253742B1E426000CE8B92 /* GetThingsDoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThingsDoneApp.swift; sourceTree = "<group>"; };
 		452253782B1E426100CE8B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		452805292B278E4F00AD9154 /* GTDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTDModel.swift; sourceTree = "<group>"; };
-		4528052B2B27905700AD9154 /* RegistrationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResponse.swift; sourceTree = "<group>"; };
 		4528052E2B2790F300AD9154 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45A601C12B94EB56002A3BC2 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		45B770382B235E3800150C59 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -69,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459057812B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				452805292B278E4F00AD9154 /* GTDModel.swift */,
-				4528052B2B27905700AD9154 /* RegistrationResponse.swift */,
-				45131C762B28855A005E5D97 /* LoginResponse.swift */,
 				45A601C12B94EB56002A3BC2 /* ApplicationState.swift */,
 			);
 			path = Models;
@@ -210,6 +206,9 @@
 			dependencies = (
 			);
 			name = GetThingsDone;
+			packageProductDependencies = (
+				459057802B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO */,
+			);
 			productName = GetThingsDone;
 			productReference = 452253712B1E426000CE8B92 /* GetThingsDone.app */;
 			productType = "com.apple.product-type.application";
@@ -282,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 452253682B1E426000CE8B92;
+			packageReferences = (
+				4590577F2B94FB6900C6F6D5 /* XCRemoteSwiftPackageReference "GettingThingsDoneSharedDTO" */,
+			);
 			productRefGroup = 452253722B1E426000CE8B92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,10 +330,8 @@
 				45B770392B235E3800150C59 /* HTTPClient.swift in Sources */,
 				45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */,
 				45131C752B288373005E5D97 /* LoginView.swift in Sources */,
-				45131C772B28855A005E5D97 /* LoginResponse.swift in Sources */,
 				45A601C22B94EB56002A3BC2 /* ApplicationState.swift in Sources */,
 				452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */,
-				4528052C2B27905700AD9154 /* RegistrationResponse.swift in Sources */,
 				4528052A2B278E5000AD9154 /* GTDModel.swift in Sources */,
 				4528052F2B2790F300AD9154 /* Constants.swift in Sources */,
 			);
@@ -674,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4590577F2B94FB6900C6F6D5 /* XCRemoteSwiftPackageReference "GettingThingsDoneSharedDTO" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/igorlopatka/GettingThingsDoneSharedDTO.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		459057802B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4590577F2B94FB6900C6F6D5 /* XCRemoteSwiftPackageReference "GettingThingsDoneSharedDTO" */;
+			productName = GettingThingsDoneSharedDTO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 452253692B1E426000CE8B92 /* Project object */;
 }

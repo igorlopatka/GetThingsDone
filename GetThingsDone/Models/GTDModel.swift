@@ -6,24 +6,25 @@
 //
 
 import Foundation
+import GettingThingsDoneSharedDTO
 
 class GTDModel: ObservableObject {
     
     let client = HTTPClient()
     
-    func register(username: String, password: String) async throws -> RegistrationResponse {
+    func register(username: String, password: String) async throws -> RegistrationResponseDTO {
         
         //model
         let registerData = ["username": username, "password": password]
-        let resource = Resource(url: Constants.URLs.register, method: .post(try! JSONEncoder().encode(registerData)), modelType: RegistrationResponse.self)
+        let resource = Resource(url: Constants.URLs.register, method: .post(try! JSONEncoder().encode(registerData)), modelType: RegistrationResponseDTO.self)
         let registerResponse = try await client.load(resource)
         return registerResponse
     }
     
-    func login(username: String, password: String) async throws -> LoginResponse {
+    func login(username: String, password: String) async throws -> LoginResponseDTO {
 
         let loginData = ["username": username, "password": password]
-        let resource = Resource(url: Constants.URLs.login, method: .post(try! JSONEncoder().encode(loginData)), modelType: LoginResponse.self)
+        let resource = Resource(url: Constants.URLs.login, method: .post(try! JSONEncoder().encode(loginData)), modelType: LoginResponseDTO.self)
         let loginResponse = try await client.load(resource)
         if !loginResponse.error && loginResponse.token != nil && loginResponse.userID != nil {
             // save to user defaults
