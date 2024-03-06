@@ -34,4 +34,16 @@ class GTDModel: ObservableObject {
         }
         return loginResponse
     }
+    
+    func saveCategory(_ categoryRequest: CategoryRequestDTO) async throws {
+        
+        guard let userID = UserDefaults.standard.userID else {
+            return
+        }
+                
+        let resource = try Resource(url: Constants.URLs.saveCategory(userID: userID), method: .post(JSONEncoder().encode(categoryRequest)), modelType: CategoryResponseDTO.self)
+        
+        let newCategory = try await client.load(resource)
+        
+    }
 }

@@ -1,13 +1,16 @@
 //
-//  AddCategoryView.swift
+//  AddCategoryScreen.swift
 //  GetThingsDone
 //
 //  Created by Igor Łopatka on 06/03/2024.
 //
 
 import SwiftUI
+import GettingThingsDoneSharedDTO
 
-struct AddCategoryView: View {
+struct AddCategoryScreen: View {
+    
+    @EnvironmentObject private var model: GTDModel
     
     @State private var title: String = ""
     @State private var color: String = "#2ecc71"
@@ -15,6 +18,15 @@ struct AddCategoryView: View {
     @Environment(\.dismiss) private var dismiss
     
     private func saveCategory() async {
+        
+        let categoryRequest = CategoryRequestDTO(title: title, color: color)
+        
+        do {
+            try await model.saveCategory(categoryRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         
     }
     
@@ -26,27 +38,27 @@ struct AddCategoryView: View {
         Form {
             TextField("Title", text: $title)
             ColorSelector(colorCode: $color)
+            Button("Save") {
+                Task {
+                    await saveCategory()
+                }
+            }
+            .disabled(!isFormValid())
         }
         .navigationTitle("New Category")
-        .toolbar {
+        .toolbar(content: {
             ToolbarItem(placement: .topBarLeading) {
                 Button("Close") {
                     dismiss()
                 }
             }
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("Save") {
-                    Task {
-                        await saveCategory()
-                    }
-                }.disabled(!isFormValid)
-            }
-        }
+        })
     }
 }
 
 #Preview {
     NavigationStack {
-        AddCategoryView()
+        AddCategoryScreen()
+            .environmentObject(GTDModel())
     }
 }

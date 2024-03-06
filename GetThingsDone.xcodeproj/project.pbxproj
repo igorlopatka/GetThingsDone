@@ -13,7 +13,8 @@
 		4522537C2B1E426100CE8B92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */; };
 		4528052A2B278E5000AD9154 /* GTDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452805292B278E4F00AD9154 /* GTDModel.swift */; };
 		4528052F2B2790F300AD9154 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4528052E2B2790F300AD9154 /* Constants.swift */; };
-		454439592B98991300E3F395 /* AddCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454439582B98991300E3F395 /* AddCategoryScreen.swift */; };
+		45384F922B98A20500CDBFF4 /* AddCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45384F912B98A20500CDBFF4 /* AddCategoryScreen.swift */; };
+		45384F942B98A6F400CDBFF4 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45384F932B98A6F400CDBFF4 /* UserDefaults+Extension.swift */; };
 		4544395C2B9899CE00E3F395 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544395B2B9899CE00E3F395 /* ColorSelector.swift */; };
 		4544395E2B989B4400E3F395 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544395D2B989B4400E3F395 /* Color+Extension.swift */; };
 		459057812B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = 459057802B94FB6900C6F6D5 /* GettingThingsDoneSharedDTO */; };
@@ -52,7 +53,8 @@
 		4522537B2B1E426100CE8B92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		452805292B278E4F00AD9154 /* GTDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTDModel.swift; sourceTree = "<group>"; };
 		4528052E2B2790F300AD9154 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		454439582B98991300E3F395 /* AddCategoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryScreen.swift; sourceTree = "<group>"; };
+		45384F912B98A20500CDBFF4 /* AddCategoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryScreen.swift; sourceTree = "<group>"; };
+		45384F932B98A6F400CDBFF4 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		4544395B2B9899CE00E3F395 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		4544395D2B989B4400E3F395 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		45A601C12B94EB56002A3BC2 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 			children = (
 				45C1659B2B2114E800F301F9 /* RegistrationScreen.swift */,
 				45131C742B288373005E5D97 /* LoginScreen.swift */,
-				454439582B98991300E3F395 /* AddCategoryScreen.swift */,
+				45384F912B98A20500CDBFF4 /* AddCategoryScreen.swift */,
 			);
 			path = ScreenViews;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 			children = (
 				45C1659E2B2116E500F301F9 /* String+Extentions.swift */,
 				4544395D2B989B4400E3F395 /* Color+Extension.swift */,
+				45384F932B98A6F400CDBFF4 /* UserDefaults+Extension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -346,13 +349,14 @@
 				45C1659C2B2114E800F301F9 /* RegistrationScreen.swift in Sources */,
 				45B770392B235E3800150C59 /* HTTPClient.swift in Sources */,
 				45C1659F2B2116E500F301F9 /* String+Extentions.swift in Sources */,
-				454439592B98991300E3F395 /* AddCategoryScreen.swift in Sources */,
+				45384F922B98A20500CDBFF4 /* AddCategoryScreen.swift in Sources */,
 				45131C752B288373005E5D97 /* LoginScreen.swift in Sources */,
 				45A601C22B94EB56002A3BC2 /* ApplicationState.swift in Sources */,
 				452253752B1E426000CE8B92 /* GetThingsDoneApp.swift in Sources */,
 				4528052A2B278E5000AD9154 /* GTDModel.swift in Sources */,
 				4544395C2B9899CE00E3F395 /* ColorSelector.swift in Sources */,
 				4544395E2B989B4400E3F395 /* Color+Extension.swift in Sources */,
+				45384F942B98A6F400CDBFF4 /* UserDefaults+Extension.swift in Sources */,
 				4528052F2B2790F300AD9154 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

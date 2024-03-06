@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject private var model: GTDModel
-//    @EnvironmentObject private var state: ApplicationState
+    @EnvironmentObject private var state: ApplicationState
     
     @State var username = ""
     @State var password = ""
@@ -26,8 +26,8 @@ struct LoginView: View {
     private func login() async {
         do {
             let loginResponse = try await model.login(username: username, password: password)
-            if loginResponse.error {
-                errorMessage = loginResponse.reason ?? ""
+            if !loginResponse.error {
+                state.routes.append(.categoryList)
             }
         } catch {
             errorMessage = error.localizedDescription

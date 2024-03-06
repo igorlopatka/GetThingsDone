@@ -45,7 +45,9 @@ struct RegistrationScreen: View {
                 SecureField("Password", text: $password)
                 Text(errorMessage)
             }
-            
+            Button("Already got account?") {
+                state.routes.append(.login)
+            }
             Button("Register") {
                 Task {
                     await register()
