@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegistrationView: View {
+struct RegistrationScreen: View {
     
     @EnvironmentObject private var model: GTDModel
     @EnvironmentObject private var state: ApplicationState
@@ -60,7 +60,7 @@ struct RegistrationView: View {
 
 #Preview {
     NavigationStack {
-        RegistrationView()
+        RegistrationScreen()
     }
     .environmentObject(GTDModel())
     .environmentObject(ApplicationState())

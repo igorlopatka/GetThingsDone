@@ -11,11 +11,11 @@ import XCTest
 
 final class RegistrationViewTests: XCTestCase {
 
-    var registrationView: RegistrationView!
+    var registrationView: RegistrationScreen!
 
     
     override func setUpWithError() throws {
-        registrationView = RegistrationView()
+        registrationView = RegistrationScreen()
     }
 
     override func tearDownWithError() throws {

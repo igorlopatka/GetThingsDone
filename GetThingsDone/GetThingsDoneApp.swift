@@ -16,11 +16,11 @@ struct GetThingsDoneApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $appState.routes) {
-                RegistrationView()
+                RegistrationScreen()
                     .navigationDestination(for: Route.self) { route in
                         switch route {
                         case .register:
-                            RegistrationView()
+                            RegistrationScreen()
                         case .login:
                             LoginView()
                         case .categoryList:
